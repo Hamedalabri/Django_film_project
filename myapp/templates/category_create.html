@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Create Tableau{% endblock %}
+
+{% block content %}
+<h2>Créer des Catégories</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+    <section class="table">
+        <button type="submit" class="btn btn-success">Créer</button>
+        <a type="button" class="btn btn-success" href="{% url 'category-list' %}">Retour à la liste</a>
+    </section>
+</form>
+
+{% endblock %}

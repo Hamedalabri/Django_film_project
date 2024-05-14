@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{% if form.instance.pk %}
+Update categorie
+{% else %}
+Create categorie
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<h2>{% if form.instance.pk %}Update{% else %}Create{% endif %} categorie</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+    <section class="table">
+        <button type="submit" class="btn btn-success">{% if form.instance.pk %}Update{% else %}Create{% endif %}</button>
+        <a type="button" class="btn btn-success" href="{% url 'category-list' %}">Retour à la liste</a>
+    </section>
+</form>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="category-detail">
+    <h2>Categorie: {{ category.name }}</h2>
+    <h3>Films dans cette catégorie:</h3>
+    <ul>
+        {% for film in films %}
+        <li>{{ film.title }} - {{ film.year }}</li>
+        {% empty %}
+        <li>Aucune film disponible dans cette catégorie.</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

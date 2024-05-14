@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card-body">
+    <h5>Mettre à jour le film</h5>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+      <section class="table">
+            <a type="button" class="btn btn-danger" href="{% url 'film-list' %}">Annuler</a>
+            <button type="submit" class="btn btn-success">Modifier</button>
+       </section>
+    </form>
+</div>
+{% endblock %}

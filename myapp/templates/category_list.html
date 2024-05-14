@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card-body">
+    <h4>Liste des Catégories</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Catégorie</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for film in categories %}
+            <tr>
+                <td>{{ film.name }}</td>
+                <td>{{ film.description }}</td>
+                <td>{{ film.author }}</td>
+                <td>{{ film.year }}</td>
+                <td>{{ film.category.name }}</td>  
+                <td>
+                    <a type="button" class="btn btn-warning" href="{% url 'category-update' film.id %}">Modifier</a>
+                    <a type="button" class="btn btn-danger" href="{% url 'category-delete' film.id %}">Supprimer</a>
+                    <a type="button" class="btn btn-success" href="{% url 'display-category' film.id %}">Affiche</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <section class="table">
+        <a type="button" class="btn btn-success" href="{% url 'category-create' %}">Créer</a>
+
+    </section>
+    
+
+    {% endblock %}    

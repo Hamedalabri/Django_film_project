@@ -1,0 +1,117 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('/static/background.gif');
+    background-size: cover;
+    color: #ffffff; /* Ensuring text is visible on darker backgrounds */
+    font-size: 16px; /* Standard text size for better readability */
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for navbar */
+    padding: 10px 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-right: 15px;
+}
+
+.nav-item a, .dropbtn {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 16px; /* Increased font size for navigation items */
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white; /* White background for dropdown */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #0056b3; /* Blue text for dropdown links */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #e1f5fe; /* Light blue for hover */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #004494; /* Darker blue for hover effect */
+}
+
+/* Table Styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th, .table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+}
+
+/* Button Styling */
+.btn {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: #0056b3; /* Blue for buttons */
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-success {
+    background-color: #4CAF50; /* Green for success actions */
+}
+
+.btn-danger {
+    background-color: #f44336; /* Red for danger actions */
+}
+
+.btn-warning {
+    background-color: #ff9800; /* Orange for warning actions */
+}
+
+.btn:hover {
+    opacity: 0.85; /* Hover effect for buttons */
+}
+h4 {
+    font-size: 30px;
+}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card-body">
+    <h5>Créer une nouvelle Catégorie</h5>
+    <form method="post" action="{% url 'add-category' %}">
+        {% csrf_token %}
+        <input type="text" name="new_category" id="new_category" placeholder="Enter new category name" required>
+        <button type="submit" class="btn btn-success">Créer</button>
+    </form>
+    <hr>
+    <h5>Catégories existantes</h5>
+    <ul>
+        {% for category in categories %}
+        <li>{{ category.name }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
